@@ -15,3 +15,6 @@
 
 Note: bootstrap intervals, McNemar tests, and the disparity example use the same prediction
 files; scripts for those are in evaluation/ (see reproduce_tables.py comments).
+
+| Section 4.4 (McNemar + IID & tract-clustered bootstrap + ZRP diff) | evaluation/compute_significance.py | predictions/voter_holdout/* (uses tract_cluster_id) | outputs/significance.json |
+| Section 4.9 (illustrative disparity + bootstrap CIs) | evaluation/compute_disparity.py | predictions/ppp_holdout/* (uses forgiven) | outputs/disparity.json |

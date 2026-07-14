@@ -31,3 +31,12 @@ re-identification risk to be negligible.
 The ZRP and Argyle \& Barber prediction files are derived from those methods' outputs and
 are redistributed here only as evaluation inputs; they remain subject to the respective
 source licenses.
+
+## Added grouping / outcome columns
+- `tract_cluster_id`: an **opaque** integer that groups records sharing a census tract, with
+  labels randomly permuted at export time. It carries **no mapping to any real tract GEOID**
+  (the mapping is not published) and exists only to permit the tract-clustered bootstrap. No
+  geography finer than state is otherwise released.
+- `forgiven` (PPP only): a boolean derived from the **public** SBA field
+  ForgivenessAmount/CurrentApprovalAmount ($\geq 0.99$), NA where no outcome is recorded. It is
+  a public loan attribute attached to the de-identified row; it is not a personal identifier.
