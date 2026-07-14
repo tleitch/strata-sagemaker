@@ -1,0 +1,14 @@
+{
+  "description": "Expected-output conventions for scoring synthetic_records.csv via the STRATA endpoint.",
+  "n_records": 500,
+  "endpoint_output_schema": {
+    "predicted_class": "str in {White,Black,Hispanic,Asian,Other}",
+    "probability_white": "float",
+    "probability_black": "float",
+    "probability_hispanic": "float",
+    "probability_asian": "float",
+    "probability_other": "float"
+  },
+  "rounding": "probabilities reported to 4 decimals; class = argmax",
+  "note": "These synthetic records exercise the input/inference path only; they are not a held-out benchmark. Metric-level reproduction of the paper uses predictions/ (see REPRODUCIBILITY.md)."
+}

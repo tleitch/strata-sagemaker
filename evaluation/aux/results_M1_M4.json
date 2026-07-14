@@ -1,0 +1,10 @@
+{
+  "note": "Table 11 (training-geography ablation). SEPARATE, EARLIER model generation (M-series, 10-fold CV era) trained with an IN-SAMPLE stacker on a distinct nationwide PPP extract; NOT the M8 out-of-fold corpus. Per-record predictions are not part of this release; these are the frozen aggregate results.json values. Absolute values are not directly comparable to the M8 person-name cohort (Table 10).",
+  "ensemble_metric": "LSTM+XGBoost combo; accuracy and White one-vs-rest FPR",
+  "models": {
+    "M1": {"train_states_voter": ["FL","NC"], "ppp_in_training": false, "score_set": "national_PPP", "n_score": 910762, "accuracy": 0.850, "white_fpr": 0.138},
+    "M2": {"train_states_voter": ["FL","GA","NC"], "ppp_in_training": false, "score_set": "national_PPP", "n_score": 910762, "accuracy": 0.859, "white_fpr": 0.128},
+    "M3": {"train_states_voter": ["FL","NC"], "ppp_in_training": true, "score_set": "New_York_PPP_OOS", "n_score": 35974, "accuracy": 0.871, "white_fpr": 0.073},
+    "M4": {"train_states_voter": ["FL","GA","NC"], "ppp_in_training": true, "score_set": "New_York_PPP_OOS", "n_score": 35974, "accuracy": 0.876, "white_fpr": 0.069}
+  }
+}
