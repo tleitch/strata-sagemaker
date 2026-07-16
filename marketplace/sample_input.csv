@@ -1,0 +1,16 @@
+customer_id,fname,mname,lname,address,city,state,zip5
+A001,MARIA,,GARCIA,1600 Pennsylvania Ave NW,Washington,DC,20500
+A002,WEI,,CHEN,1 Infinite Loop,Cupertino,CA,95014
+A003,JAMES,R,SMITH,233 S Wacker Dr,Chicago,IL,60606
+A004,AISHA,,OKAFOR,1350 Avenue of the Americas,New York,NY,10019
+A005,CARLOS,A,RODRIGUEZ,845 N Michigan Ave,Chicago,IL,60611
+A006,PRIYA,,PATEL,600 Congress Ave,Austin,TX,78701
+A007,KENJI,,TANAKA,400 Broad St,Seattle,WA,98109
+A008,FATIMA,,KHAN,1 City Hall Sq,Boston,MA,02201
+A009,DESHAWN,,WASHINGTON,2 15th St NW,Washington,DC,20024
+A010,OLGA,,IVANOVA,701 Pennsylvania Ave NW,Washington,DC,20004
+A011,JOSE,L,MARTINEZ,111 S Michigan Ave,Chicago,IL,60603
+A012,EMILY,,JOHNSON,151 3rd St,San Francisco,CA,94103
+A013,MOHAMMED,,ALI,3800 Montrose Blvd,Houston,TX,77006
+A014,ROSA,,SILVA,1000 5th Ave,New York,NY,10028
+A015,TYRONE,,BROWN,zzz unknown street,,ZZ,00000
