@@ -3,7 +3,7 @@
   "upload_type": "software",
   "access_right": "open",
   "license": "Apache-2.0",
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "description": "Public evaluation artifact for the paper \"STRATA: A Name-and-Geography Race Inference Model for Fair Lending and Housing Equity Applications\" (Chalavadi, Leitch, and Pastor). Contains versioned, de-identified prediction files for every reported model and ablation, the evaluation and plotting code, a locked software environment, artifact checksums, PPP cohort-construction and scoring scripts, and a synthetic test dataset. Every table, figure, confidence interval, and statistical test in the paper is regenerable from the frozen prediction files (make reproduce). No names, addresses, loan identifiers, or voter-file identifiers are distributed. Model training code and weights are withheld (commercial); the merged voter-file training corpus is not redistributed (individually race-labeled and geocoded). Code is licensed Apache-2.0; released prediction and data artifacts are licensed CC-BY-4.0.",
   "creators": [
     { "name": "Chalavadi, Sanjana", "affiliation": "aequumAI LLC", "orcid": "0009-0005-6198-6859" },
@@ -22,5 +22,5 @@
   "related_identifiers": [
     { "identifier": "arXiv:2504.21259", "relation": "isSupplementTo", "scheme": "arxiv", "resource_type": "publication-preprint" }
   ],
-  "notes": "TODO before release: (1) add Pastor ORCID if available (Chalavadi and Leitch ORCIDs already set); (2) after the DMLR DOI is assigned, add a related_identifiers entry {\"identifier\": \"<DMLR DOI>\", \"relation\": \"isSupplementTo\", \"scheme\": \"doi\"}; (3) bump \"version\" to match the GitHub release tag."
+  "notes": "TODO: (1) add Pastor ORCID if available (Chalavadi and Leitch ORCIDs already set); (2) after the DMLR DOI is assigned, add a related_identifiers entry {\"identifier\": \"<DMLR DOI>\", \"relation\": \"isSupplementTo\", \"scheme\": \"doi\"}. Keep \"version\" in sync with the GitHub release tag on each release."
 }
