@@ -13,7 +13,7 @@ Run:  python evaluation/reproduce_tables.py         (or: make reproduce)
 
 Cohort definitions (match the paper):
   voter evaluation cohort = voter_holdout rows with true_fine_class != 'multi'  (N=981,288)
-  PPP evaluation cohort   = ppp_holdout rows with person_name_cohort == True     (N=111,062)
+  PPP evaluation cohort   = ppp_holdout rows with person_name_cohort == True     (N=124,914)
 """
 import os, glob, numpy as np, pandas as pd
 from sklearn.metrics import f1_score, precision_score
@@ -77,4 +77,4 @@ print("\nHeadline check (STRATA ensemble):")
 ens=tab[(tab.cohort=='voter_holdout')&(tab.model=='strata_ensemble')].iloc[0]
 print(f"  voter subset  acc={ens.accuracy}  White FPR={ens.fpr_White}  (paper: 0.8876 / 0.1783)")
 pe=tab[(tab.cohort=='ppp_holdout')&(tab.model=='strata_ensemble')].iloc[0]
-print(f"  PPP person    acc={pe.accuracy}  White FPR={pe.fpr_White}  (paper: 0.8846 / 0.0915)")
+print(f"  PPP person    acc={pe.accuracy}  White FPR={pe.fpr_White}  (paper: 0.8845 / 0.0981)")

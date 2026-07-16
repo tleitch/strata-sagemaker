@@ -20,12 +20,12 @@ results are reported from their frozen `results.json` (included under `evaluatio
 
 ## Cohort definitions used by the scripts
 - **Voter evaluation cohort** (N = 981,288): `voter_holdout` rows with `true_fine_class != "multi"`.
-- **PPP evaluation cohort** (N = 111,062): `ppp_holdout` rows with `person_name_cohort == True`.
+- **PPP evaluation cohort** (N = 124,914): `ppp_holdout` rows with `person_name_cohort == True`.
 - BISG/BIFSG metrics are computed over their **scored subset** (`returned_prediction == True`);
   pairwise tests involving them use common support.
 
 Running `make reproduce` regenerates the headline values, e.g. STRATA ensemble voter-subset
-accuracy 0.8876 / White FPR 0.1783 and PPP person-cohort 0.8846 / 0.0915.
+accuracy 0.8876 / White FPR 0.1783 and PPP person-cohort 0.8845 / 0.0981.
 
 ## Compute environment (GPU vs CPU)
 The frozen prediction files in this repository were generated on **GPU** (the paper's compute)
@@ -37,7 +37,7 @@ tail). These do **not** change any reported result: class argmax agrees on 1,111
 records (39 differ, 0.0035%); all metric tables are argmax-based and identical; per-class Brier
 is identical to four decimals; the Section-4.9 aggregate share errors differ by ≤0.002 pp; and
 the probability-weighted disparity is identical at the reported precision. The only reported
-figure sensitive to this is the PPP-cohort White FPR (0.0915 GPU vs 0.0914 CPU), a last-digit
-rounding-boundary shift. In short: **metric-level reproduction from the frozen files here is
+figure sensitive to this is the PPP-cohort White FPR, which shifts by at most ~0.0001
+(CPU/GPU floating point), a last-digit rounding-boundary effect. In short: **metric-level reproduction from the frozen files here is
 exact; functional reproduction via the CPU inference container reproduces class argmax and all
 reported metrics, and class probabilities to within ~3e-2 (CPU/GPU floating point).**
