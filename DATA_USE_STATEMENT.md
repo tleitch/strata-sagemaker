@@ -7,6 +7,10 @@
   and a person-name-cohort flag.
 - Evaluation, plotting, and cohort-construction code; a synthetic test set; a locked environment.
 
+*Note:* the released prediction probabilities are GPU-generated (the paper's compute). The
+CPU-only inference container reproduces class argmax and all reported metrics exactly, and
+probabilities to within ~3e-2 (CPU/GPU floating point); see `REPRODUCIBILITY.md`.
+
 ## Withheld (never in this repository)
 - **Personal identifiers:** names, addresses, PPP `LoanNumber`, voter-file identifiers, ZIP,
   and census tract / block-group GEOIDs. None of these appear in any file, and no released

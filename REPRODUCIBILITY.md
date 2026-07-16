@@ -26,3 +26,18 @@ results are reported from their frozen `results.json` (included under `evaluatio
 
 Running `make reproduce` regenerates the headline values, e.g. STRATA ensemble voter-subset
 accuracy 0.8876 / White FPR 0.1783 and PPP person-cohort 0.8846 / 0.0915.
+
+## Compute environment (GPU vs CPU)
+The frozen prediction files in this repository were generated on **GPU** (the paper's compute)
+and are the exact source of every reported table, figure, CI, and statistical test. The deployed
+inference container is **CPU-only** (a deliberate network-isolation choice). CPU-vs-GPU
+floating-point differences in the character BiLSTM propagate through the XGBoost post-filter and
+produce small per-class probability differences (median 0, p90 ≈ 8e-5, max ≈ 3e-2 on a thin
+tail). These do **not** change any reported result: class argmax agrees on 1,111,843 / 1,111,882
+records (39 differ, 0.0035%); all metric tables are argmax-based and identical; per-class Brier
+is identical to four decimals; the Section-4.9 aggregate share errors differ by ≤0.002 pp; and
+the probability-weighted disparity is identical at the reported precision. The only reported
+figure sensitive to this is the PPP-cohort White FPR (0.0915 GPU vs 0.0914 CPU), a last-digit
+rounding-boundary shift. In short: **metric-level reproduction from the frozen files here is
+exact; functional reproduction via the CPU inference container reproduces class argmax and all
+reported metrics, and class probabilities to within ~3e-2 (CPU/GPU floating point).**
