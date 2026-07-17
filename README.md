@@ -31,10 +31,10 @@ paper's exact model on new/synthetic records is available at no cost to reviewer
 SageMaker endpoint; retraining from source is not supported.
 
 ## Inference access
-- Commercial deployment: **AWS Marketplace listing "aequumAI STRATA (M8-BGT)"** (Amazon
-  SageMaker AI real-time endpoint or Batch Transform), under the aequumAI STRATA EULA v3.0.
-  The public listing URL (`https://aws.amazon.com/marketplace/pp/prodview-…`) will be added
-  here on approval — the listing is currently in AWS review. SageMaker model package:
+- Commercial deployment: **AWS Marketplace — [STRATA: Race/Ethnicity Probability + Uncertainty
+  (US, name+address)](https://aws.amazon.com/marketplace/pp/prodview-edxki4swy6hvs)** (seller:
+  aequumAI LLC), deployable as an Amazon SageMaker AI real-time endpoint or Batch Transform,
+  under the aequumAI STRATA EULA v3.0. SageMaker model package:
   `arn:aws:sagemaker:us-east-1:966917020084:model-package/m8-bgt-race-v1`; see
   `marketplace/M8-BGT_sample_notebook.ipynb` for a deployment example.
 - **No-cost review / academic use:** governed by the Academic Use Addendum v1.0
