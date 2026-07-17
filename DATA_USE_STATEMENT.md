@@ -31,10 +31,18 @@ outputs and race labels, over cohorts of ~10^5–10^6 records. No geographic uni
 state is released, no free-text, and no stable hash of any identifier. We judge row-level
 re-identification risk to be negligible.
 
-## Third-party outputs
-The ZRP and Argyle \& Barber prediction files are derived from those methods' outputs and
-are redistributed here only as evaluation inputs; they remain subject to the respective
-source licenses.
+## Third-party baselines
+Two comparison files are baselines, not STRATA outputs. Neither contains any third-party
+source code or dataset — only de-identified probability/label outputs:
+- **ZRP:** produced by running the open-source `zestai/zrp` package, which is licensed
+  **Apache-2.0** (redistribution permitted). The file here is de-identified model output, not
+  ZRP source code or its reference tables.
+- **Argyle & Barber:** produced by our own faithful reimplementation of the published method
+  (Argyle & Barber, 2024); the file is our reimplementation's de-identified output, not the
+  authors' code or data.
+
+Both are released under this repository's data license (CC-BY-4.0) as de-identified evaluation
+baselines.
 
 ## Added grouping / outcome columns
 - `tract_cluster_id`: an **opaque** integer that groups records sharing a census tract, with

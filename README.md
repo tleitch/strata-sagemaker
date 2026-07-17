@@ -43,9 +43,11 @@ SageMaker endpoint; retraining from source is not supported.
 ## Licensing
 - Code (`evaluation/`, `ppp_pipeline/`, `synthetic_test/`): **Apache-2.0**.
 - Released artifacts (prediction files, docs): **CC BY 4.0**.
-- **Third-party note:** the ZRP and Argyle \& Barber prediction files are derived from those
-  methods' outputs and are subject to their respective source licenses; verify redistribution
-  terms before relying on those two files.
+- **Third-party baselines:** the ZRP file is de-identified output from the open-source
+  `zestai/zrp` package (**Apache-2.0**, redistribution permitted); the Argyle & Barber file is
+  de-identified output from our own reimplementation of the published method. Neither contains
+  third-party source code or datasets; both are released here under CC-BY-4.0 as evaluation
+  baselines (see `DATA_USE_STATEMENT.md`).
 
 ## Citation
 Chalavadi, S., Leitch, T., and Pastor, A. STRATA: A Name-and-Geography Race Inference Model
