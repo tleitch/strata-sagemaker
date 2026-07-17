@@ -22,5 +22,5 @@
   "related_identifiers": [
     { "identifier": "arXiv:2504.21259", "relation": "isSupplementTo", "scheme": "arxiv", "resource_type": "publication-preprint" }
   ],
-  "notes": "TODO: (1) add Pastor ORCID if available (Chalavadi and Leitch ORCIDs already set); (2) after the DMLR DOI is assigned, add a related_identifiers entry {\"identifier\": \"<DMLR DOI>\", \"relation\": \"isSupplementTo\", \"scheme\": \"doi\"}. Keep \"version\" in sync with the GitHub release tag on each release."
+  "notes": "TODO: after the DMLR DOI is assigned, add a related_identifiers entry {\"identifier\": \"<DMLR DOI>\", \"relation\": \"isSupplementTo\", \"scheme\": \"doi\"}. Keep \"version\" in sync with the GitHub release tag on each release. (Pastor has no ORCID; Chalavadi and Leitch ORCIDs are set.)"
 }
